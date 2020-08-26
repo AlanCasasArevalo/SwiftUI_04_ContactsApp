@@ -6,7 +6,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 List {
-                    Text("")
+                    ContactCell()
                 }
                 NavigationLink (destination: AddFormView()) {
                     Spacer()
@@ -15,7 +15,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                     Spacer()
                 }
-            .padding()
+                .padding()
                 .background(Color(.darkGray))
             }
         }

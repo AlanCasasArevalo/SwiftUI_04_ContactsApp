@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5140588024F6BCF8009B7DA4 /* AddFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5140587F24F6BCF8009B7DA4 /* AddFormView.swift */; };
+		5140588224F6C972009B7DA4 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5140588124F6C972009B7DA4 /* ContactCell.swift */; };
 		51C35F9F24F6B640009F0047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35F9E24F6B640009F0047 /* AppDelegate.swift */; };
 		51C35FA124F6B640009F0047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FA024F6B640009F0047 /* SceneDelegate.swift */; };
 		51C35FA424F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FA224F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5140587F24F6BCF8009B7DA4 /* AddFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormView.swift; sourceTree = "<group>"; };
+		5140588124F6C972009B7DA4 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		51C35F9B24F6B640009F0047 /* SwiftUI_04_ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_04_ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C35F9E24F6B640009F0047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C35FA024F6B640009F0047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				5140587F24F6BCF8009B7DA4 /* AddFormView.swift */,
+				5140588124F6C972009B7DA4 /* ContactCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				5140588024F6BCF8009B7DA4 /* AddFormView.swift in Sources */,
 				51C35FA624F6B640009F0047 /* ContentView.swift in Sources */,
 				51C35FA424F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld in Sources */,
+				5140588224F6C972009B7DA4 /* ContactCell.swift in Sources */,
 				51C35FB624F6B94B009F0047 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
