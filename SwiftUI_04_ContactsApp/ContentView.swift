@@ -1,16 +1,24 @@
-//
-//  ContentView.swift
-//  SwiftUI_04_ContactsApp
-//
-//  Created by Everis on 26/08/2020.
-//  Copyright © 2020 Alan. All rights reserved.
-//
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            VStack {
+                List {
+                    Text("")
+                }
+                NavigationLink (destination: AddFormView()) {
+                    Spacer()
+                    Image(systemName: "person.crop.circle.badge.plus")
+                        .font(.system(.largeTitle, design: .rounded))
+                        .foregroundColor(.white)
+                    Spacer()
+                }
+            .padding()
+                .background(Color(.darkGray))
+            }
+        }
     }
 }
 

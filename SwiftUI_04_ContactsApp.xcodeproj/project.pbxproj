@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5140588024F6BCF8009B7DA4 /* AddFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5140587F24F6BCF8009B7DA4 /* AddFormView.swift */; };
 		51C35F9F24F6B640009F0047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35F9E24F6B640009F0047 /* AppDelegate.swift */; };
 		51C35FA124F6B640009F0047 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FA024F6B640009F0047 /* SceneDelegate.swift */; };
 		51C35FA424F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FA224F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld */; };
@@ -14,9 +15,11 @@
 		51C35FA824F6B642009F0047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C35FA724F6B642009F0047 /* Assets.xcassets */; };
 		51C35FAB24F6B642009F0047 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C35FAA24F6B642009F0047 /* Preview Assets.xcassets */; };
 		51C35FAE24F6B642009F0047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C35FAC24F6B642009F0047 /* LaunchScreen.storyboard */; };
+		51C35FB624F6B94B009F0047 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FB524F6B94B009F0047 /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5140587F24F6BCF8009B7DA4 /* AddFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormView.swift; sourceTree = "<group>"; };
 		51C35F9B24F6B640009F0047 /* SwiftUI_04_ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_04_ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C35F9E24F6B640009F0047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C35FA024F6B640009F0047 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		51C35FAA24F6B642009F0047 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		51C35FAD24F6B642009F0047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51C35FAF24F6B642009F0047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51C35FB524F6B94B009F0047 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5140587E24F6BCDA009B7DA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5140587F24F6BCF8009B7DA4 /* AddFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		51C35F9224F6B640009F0047 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +70,9 @@
 		51C35F9D24F6B640009F0047 /* SwiftUI_04_ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				5140587E24F6BCDA009B7DA4 /* Views */,
 				51C35F9E24F6B640009F0047 /* AppDelegate.swift */,
+				51C35FB724F6B94F009F0047 /* Models */,
 				51C35FA024F6B640009F0047 /* SceneDelegate.swift */,
 				51C35FA524F6B640009F0047 /* ContentView.swift */,
 				51C35FA724F6B642009F0047 /* Assets.xcassets */,
@@ -76,6 +90,14 @@
 				51C35FAA24F6B642009F0047 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		51C35FB724F6B94F009F0047 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51C35FB524F6B94B009F0047 /* Contacts.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +173,10 @@
 			files = (
 				51C35F9F24F6B640009F0047 /* AppDelegate.swift in Sources */,
 				51C35FA124F6B640009F0047 /* SceneDelegate.swift in Sources */,
+				5140588024F6BCF8009B7DA4 /* AddFormView.swift in Sources */,
 				51C35FA624F6B640009F0047 /* ContentView.swift in Sources */,
 				51C35FA424F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld in Sources */,
+				51C35FB624F6B94B009F0047 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
