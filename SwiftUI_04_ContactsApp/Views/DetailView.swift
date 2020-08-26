@@ -20,21 +20,48 @@ struct DetailView: View {
                 .padding()
             VStack (alignment: .leading, spacing: 8) {
                 Text("Nombre")
-                .font(.system(.title, design: .rounded))
-
+                    .font(.system(.title, design: .rounded))
+                
                 Text("Apellido")
-                .font(.system(.headline, design: .rounded))
-
+                    .font(.system(.headline, design: .rounded))
+                
                 Text("Tel: 666 666 666")
-                .font(.system(.largeTitle, design: .rounded))
+                    .font(.system(.largeTitle, design: .rounded))
             }
             
             HStack {
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "phone.fill")
+                        .modifier(CustomCircularButtonModifier(backgroundColor: .green))
+                }
                 
-            }            
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "pencil")
+                        .modifier(CustomCircularButtonModifier(backgroundColor: Color(.systemGray2)))
+                }
+
+            }
+            Spacer()
         }
-        .padding()
-        .cornerRadius(20, antialiased: true)    }
+    }
+}
+
+struct CustomCircularButtonModifier: ViewModifier {
+    
+    var backgroundColor: Color
+    
+    func body(content: Content) -> some View {
+        content
+            .padding(30)
+            .background(backgroundColor)
+            .clipShape(Circle())
+            .foregroundColor(.white)
+            .font(.system(.largeTitle))
+    }
 }
 
 struct DetailView_Previews: PreviewProvider {
