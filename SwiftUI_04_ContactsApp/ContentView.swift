@@ -3,7 +3,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @FetchRequest(fetchRequest: Contacts.performRequest()) var contacts: FetchedResults<Contacts>
+//    @FetchRequest(fetchRequest: Contacts.performRequest()) var contacts: FetchedResults<Contacts>
+    
+    @FetchRequest(entity: Contacts.entity(),
+                  sortDescriptors: [NSSortDescriptor(keyPath: \Contacts.initials, ascending: true)]) var contacts: FetchedResults<Contacts>
     
     var body: some View {
         NavigationView {

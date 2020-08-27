@@ -11,10 +11,11 @@ final public class Contacts: NSManagedObject, Identifiable {
     
 }
 
-extension Contacts {
-    static func performRequest () -> NSFetchRequest<Contacts> {
-        let request = Contacts.fetchRequest() as! NSFetchRequest<Contacts>
-        request.sortDescriptors = [NSSortDescriptor(key: "initials", ascending: true)]
-        return request
-    }
-}
+//
+//extension Contacts {
+//    static func performRequest () -> NSFetchRequest<Contacts> {
+//        let request = Contacts.fetchRequest() as! NSFetchRequest<Contacts>
+//        request.sortDescriptors = [NSSortDescriptor(key: "initials", ascending: true)]
+//        return request
+//    }
+//}
