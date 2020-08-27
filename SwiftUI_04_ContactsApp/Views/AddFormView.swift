@@ -58,7 +58,7 @@ extension AddFormView {
     
     func setInitials (name: String, surname: String) -> String {
         var initials = ""
-        initials = "\(name.first?.uppercased())\(surname.first?.uppercased())"
+        initials = "\(name.first?.uppercased() ?? "")\(surname.first?.uppercased() ?? "")"
         return initials
     }
 }

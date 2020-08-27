@@ -18,6 +18,7 @@
 		51C35FAB24F6B642009F0047 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C35FAA24F6B642009F0047 /* Preview Assets.xcassets */; };
 		51C35FAE24F6B642009F0047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C35FAC24F6B642009F0047 /* LaunchScreen.storyboard */; };
 		51C35FB624F6B94B009F0047 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C35FB524F6B94B009F0047 /* Contacts.swift */; };
+		51C88F7224F81D9300A07D97 /* ContactResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C88F7124F81D9300A07D97 /* ContactResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		51C35FAD24F6B642009F0047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51C35FAF24F6B642009F0047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51C35FB524F6B94B009F0047 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		51C88F7124F81D9300A07D97 /* ContactResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				51C35FB524F6B94B009F0047 /* Contacts.swift */,
+				51C88F7124F81D9300A07D97 /* ContactResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				51C35FA624F6B640009F0047 /* ContentView.swift in Sources */,
 				51C35FA424F6B640009F0047 /* SwiftUI_04_ContactsApp.xcdatamodeld in Sources */,
 				5140588224F6C972009B7DA4 /* ContactCell.swift in Sources */,
+				51C88F7224F81D9300A07D97 /* ContactResult.swift in Sources */,
 				51C35FB624F6B94B009F0047 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

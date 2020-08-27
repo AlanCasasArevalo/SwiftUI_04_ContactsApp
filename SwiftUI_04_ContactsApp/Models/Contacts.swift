@@ -10,3 +10,11 @@ final public class Contacts: NSManagedObject, Identifiable {
     @NSManaged public var phone: String
     
 }
+
+extension Contacts {
+    static func performRequest () -> NSFetchRequest<Contacts> {
+        let request = Contacts.fetchRequest() as! NSFetchRequest<Contacts>
+        request.sortDescriptors = [NSSortDescriptor(key: "initials", ascending: true)]
+        return request
+    }
+}

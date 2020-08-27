@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct ContactCell: View {
+    
+    var contactResult: ContactResult
+    
     var body: some View {
         HStack  {
-            Text("AM")
+            Text(contactResult.initials)
                 .padding(30)
                 .background(Color(.darkGray))
                 .clipShape(Circle())
@@ -19,13 +22,13 @@ struct ContactCell: View {
                 .foregroundColor(.white)
                 .padding()
             VStack (alignment: .leading, spacing: 10) {
-                Text("Nombre")
+                Text(contactResult.name)
                 .font(.system(.title, design: .rounded))
 
-                Text("Apellido")
+                Text(contactResult.surname)
                 .font(.system(.headline, design: .rounded))
 
-                Text("Telefono")
+                Text(contactResult.phone)
                 .font(.system(.caption, design: .rounded))
             }
             Spacer()
@@ -38,6 +41,6 @@ struct ContactCell: View {
 
 struct ContactCell_Previews: PreviewProvider {
     static var previews: some View {
-        ContactCell()
+        ContactCell(contactResult: ContactResult(name: "", surname: "", initials: "", phone: ""))
     }
 }
