@@ -21,8 +21,8 @@ struct ContentView: View {
             VStack {
                 List {
                     ForEach (self.contacts) { contact in
-                        NavigationLink (destination: DetailView()) {
-                            ContactCell(contactResult: self.mapContactIntoContactResult(contact: contact))
+                        NavigationLink (destination: DetailView(contact: contact)) {
+                            ContactCell(contactResult: contact)
                         }
                     }
                     .onDelete { index in
@@ -47,15 +47,6 @@ struct ContentView: View {
             .navigationBarItems(leading: EditButton())
             }
         }
-    }
-}
-
-extension ContentView {
-    func mapContactIntoContactResult (contact: Contacts) -> ContactResult {
-        let initials = contact.initials 
-        
-        let contactResult = ContactResult(name: contact.name, surname: contact.surname, initials: initials, phone: contact.phone)
-        return contactResult
     }
 }
 

@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    var contact: Contacts
+
     var body: some View {
         VStack  {
-            Text("AM")
+            Text(contact.initials)
                 .padding(50)
                 .background(Color(.darkGray))
                 .clipShape(Circle())
@@ -19,13 +22,13 @@ struct DetailView: View {
                 .foregroundColor(.white)
                 .padding()
             VStack (alignment: .leading, spacing: 8) {
-                Text("Nombre")
+                Text(contact.name)
                     .font(.system(.title, design: .rounded))
                 
-                Text("Apellido")
+                Text(contact.surname)
                     .font(.system(.headline, design: .rounded))
                 
-                Text("Tel: 666 666 666")
+                Text(contact.phone)
                     .font(.system(.largeTitle, design: .rounded))
             }
             
@@ -66,6 +69,6 @@ struct CustomCircularButtonModifier: ViewModifier {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(contact: Contacts())
     }
 }

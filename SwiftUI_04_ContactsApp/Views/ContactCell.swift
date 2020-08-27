@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContactCell: View {
     
-    var contactResult: ContactResult
+    var contactResult: Contacts
     
     var body: some View {
         HStack  {
@@ -41,6 +41,6 @@ struct ContactCell: View {
 
 struct ContactCell_Previews: PreviewProvider {
     static var previews: some View {
-        ContactCell(contactResult: ContactResult(name: "", surname: "", initials: "", phone: ""))
+        ContactCell(contactResult: Contacts())
     }
 }
