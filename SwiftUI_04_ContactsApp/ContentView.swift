@@ -3,23 +3,36 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) var context
+
 //    @FetchRequest(fetchRequest: Contacts.performRequest()) var contacts: FetchedResults<Contacts>
     
-//    @FetchRequest(entity: Contacts.entity(),
-//                  sortDescriptors: [NSSortDescriptor(keyPath: \Contacts.initials, ascending: true)]) var contacts: FetchedResults<Contacts>
-
     @FetchRequest(entity: Contacts.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Contacts.initials , ascending: true)],
-                  predicate: NSPredicate(format: "surname = %@", "Guzman")
-    ) var contacts: FetchedResults<Contacts>
+                  sortDescriptors: [NSSortDescriptor(keyPath: \Contacts.initials, ascending: true)]) var contacts: FetchedResults<Contacts>
+
+//    @FetchRequest(entity: Contacts.entity(),
+//                  sortDescriptors: [NSSortDescriptor(keyPath: \Contacts.initials , ascending: true)],
+//                  predicate: NSPredicate(format: "surname = %@", "Guzman")
+//    ) var contacts: FetchedResults<Contacts>
 
     
     var body: some View {
         NavigationView {
             VStack {
-                List (self.contacts) { contact in
-                    NavigationLink (destination: DetailView()) {
-                        ContactCell(contactResult: self.mapContactIntoContactResult(contact: contact))
+                List {
+                    ForEach (self.contacts) { contact in
+                        NavigationLink (destination: DetailView()) {
+                            ContactCell(contactResult: self.mapContactIntoContactResult(contact: contact))
+                        }
+                    }
+                    .onDelete { index in
+                        let contactToDelete = self.contacts[index.first!]
+                        self.context.delete(contactToDelete)
+                        do {
+                            try self.context.save()
+                        } catch let error as NSError {
+                            print(error.localizedDescription)
+                        }
                     }
                 }
                 NavigationLink (destination: AddFormView()) {
@@ -31,6 +44,7 @@ struct ContentView: View {
                 }
                 .padding()
                 .background(Color(.darkGray))
+            .navigationBarItems(leading: EditButton())
             }
         }
     }
