@@ -36,7 +36,8 @@ struct DetailView: View {
             
             HStack {
                 Button(action: {
-                    
+                    guard let phone = URL(string: "tel://" + self.contact.phone) else { return }
+                    UIApplication.shared.open(phone)
                 }) {
                     Image(systemName: "phone.fill")
                         .modifier(CustomCircularButtonModifier(backgroundColor: .green))
