@@ -10,8 +10,10 @@ import SwiftUI
 
 struct DetailView: View {
     
-    var contact: Contacts
+    @Environment(\.presentationMode) var presentation
 
+    var contact: Contacts
+    
     var body: some View {
         VStack  {
             Text(contact.initials)
@@ -40,13 +42,10 @@ struct DetailView: View {
                         .modifier(CustomCircularButtonModifier(backgroundColor: .green))
                 }
                 
-                Button(action: {
-                    
-                }) {
+                NavigationLink(destination: ContactEdit(contact: contact)) {
                     Image(systemName: "pencil")
                         .modifier(CustomCircularButtonModifier(backgroundColor: Color(.systemGray2)))
                 }
-
             }
             Spacer()
         }
